@@ -1,4 +1,4 @@
-### Shared files autoexport
+# ROS2 Shared files autoexport
 
 Automatically export to the workspace's share path yaml and launch file upon saving, without recompiling the sources all the times. To do so:
 
@@ -9,8 +9,10 @@ In the directory of `update_shared`, run:
 * `sudo make install` to install the script to `/usr/local/bin`
 * `sudo make uninstall` to remove the script
 
-This script will get the package from the directory it is executed from (can be any subfolder), and runs `colcon build` for only that package and setting the cmake option `${shared_only}`` to true.
-
+This script will get the package from the directory it is executed from (can be any subfolder), and runs `colcon build` for only that package and setting the cmake option `${shared_only}`` to true:
+```
+colcon build --packages-select $package_name --cmake-args -Dshared_only=true
+```
 ## Configure your CMakeLists.txt
 
 Group all the source targets and everything you don't want to build when exporting the shared files under an if statement, like so:

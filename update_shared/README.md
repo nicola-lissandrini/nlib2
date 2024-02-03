@@ -13,11 +13,16 @@ This script will get the package from the directory it is executed from (can be 
 ```
 colcon build --packages-select $package_name --cmake-args -Dshared_only=true
 ```
+
+**Warning**: it assumes that the setup file to be sourced are set in the ~/.bashrc file.
+
 ## Configure your CMakeLists.txt
 
 Group all the source targets and everything you don't want to build when exporting the shared files under an if statement, like so:
 ```
 ...
+
+option (SHARED_ONLY "Only export shared files" OFF)
 
 install (DIRECTORY
 	launch # eg.
@@ -32,6 +37,8 @@ if (NOT ${shared_only})
 	...
 	install (TARGET ...
 endif()
+
+set(SHARED_ONLY OFF CACHE BOOL "Force SHARED_ONLY to OFF by default" FORCE)
 ```
 
 ## Configure your editor

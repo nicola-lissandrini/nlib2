@@ -1,6 +1,6 @@
 BINDIR=/usr/local/bin
 
-SCRIPT=./update_shared
+SCRIPT=update_shared.sh
 
 install:
 	@echo "Installing script to $(BINDIR)"
@@ -8,4 +8,4 @@ install:
 
 uninstall:
 	@echo "Removing script from $(BINDIR)"
-	$rm -f $(BINDIR)/$(SCRIPT)
+	@rm -f $(BINDIR)/$(SCRIPT)

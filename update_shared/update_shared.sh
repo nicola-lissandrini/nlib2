@@ -43,7 +43,13 @@ done
 if ! $workspace_found; then
 	echo "No valid workspaces found."
 	exit -2
-fi
+fi 
 
 echo "Workspace found: $workspace_dir"
-echo "colcon build --packages-select $package_name --cmake-args -Dshared_only=true "
+source /opt/ros/iron/setup.bash
+source ./install/setup.bash
+
+echo "Running"
+echo "colcon build --packages-select $package_name --cmake-args -DSHARED_ONLY=ON "
+
+colcon build --packages-select $package_name --cmake-args -DSHARED_ONLY=ON 

@@ -1,0 +1,20 @@
+\hypertarget{group__modflow}{}\doxysection{Modflow\+: a graph based modular interface}
+\label{group__modflow}\index{Modflow: a graph based modular interface@{Modflow: a graph based modular interface}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnlib2_1_1Channel}{nlib2\+::\+Channel}}
+\begin{DoxyCompactList}\small\item\em Defines a channel that each module can create and to which other modules can connect. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1ResourceManager}{nlib2\+::\+Resource\+Manager}}
+\begin{DoxyCompactList}\small\item\em Allow sharing resources of generic types among modules. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1Module}{nlib2\+::\+Module}}
+\begin{DoxyCompactList}\small\item\em This is the core node of a \mbox{\hyperlink{classnlib2_1_1Modflow}{Modflow}} graph. Inherit this class to define the main computation units to happen in this module. Each module can define new Channels to which it can emit output events after computation is done, and request channels to connect to when data is transmitted on such channels. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1Sources}{nlib2\+::\+Sources}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classnlib2_1_1Sources}{Sources}} are a particular \mbox{\hyperlink{classnlib2_1_1Module}{Module}} whose channels are declared by the parent object, which emits signals on such channels externally. The \mbox{\hyperlink{classnlib2_1_1Modflow}{Modflow}} object will automatically load a module, available externally via \mbox{\hyperlink{classnlib2_1_1Modflow_ac6cc3a2e1c7bc9bd974a2f5555e5bcf4}{Modflow\+::sources}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1SerializedSlot}{nlib2\+::\+Serialized\+Slot}}
+\begin{DoxyCompactList}\small\item\em Type erasure wrapper for storing generic functions. For internal use. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1Modflow}{nlib2\+::\+Modflow}}
+\begin{DoxyCompactList}\small\item\em This is the main class that handles the call flow between modules. First, you will need to derive this class and override \mbox{\hyperlink{classnlib2_1_1Modflow_ad48414425831bab7fa9ec617cd1a0aa2}{load\+Modules}}, calling \mbox{\hyperlink{classnlib2_1_1Modflow_a7454ed4e6961c6db8d5adf2128250b73}{load\+Module}} with the type of each module you want to load as template parameter. Then\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

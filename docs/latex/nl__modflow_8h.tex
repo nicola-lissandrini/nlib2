@@ -1,0 +1,59 @@
+\hypertarget{nl__modflow_8h}{}\doxysection{include/nlib2/nl\+\_\+modflow.h File Reference}
+\label{nl__modflow_8h}\index{include/nlib2/nl\_modflow.h@{include/nlib2/nl\_modflow.h}}
+{\ttfamily \#include \char`\"{}nl\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nl\+\_\+params.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$typeindex$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include \char`\"{}nl\+\_\+modflow\+\_\+impl.\+hpp\char`\"{}}\newline
+Include dependency graph for nl\+\_\+modflow.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{nl__modflow_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{nl__modflow_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnlib2_1_1Event}{nlib2\+::\+Event}}
+\item 
+class \mbox{\hyperlink{classnlib2_1_1Channel}{nlib2\+::\+Channel}}
+\begin{DoxyCompactList}\small\item\em Defines a channel that each module can create and to which other modules can connect. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1ResourceManager}{nlib2\+::\+Resource\+Manager}}
+\begin{DoxyCompactList}\small\item\em Allow sharing resources of generic types among modules. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1Module}{nlib2\+::\+Module}}
+\begin{DoxyCompactList}\small\item\em This is the core node of a \mbox{\hyperlink{classnlib2_1_1Modflow}{Modflow}} graph. Inherit this class to define the main computation units to happen in this module. Each module can define new Channels to which it can emit output events after computation is done, and request channels to connect to when data is transmitted on such channels. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1Sources}{nlib2\+::\+Sources}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classnlib2_1_1Sources}{Sources}} are a particular \mbox{\hyperlink{classnlib2_1_1Module}{Module}} whose channels are declared by the parent object, which emits signals on such channels externally. The \mbox{\hyperlink{classnlib2_1_1Modflow}{Modflow}} object will automatically load a module, available externally via \mbox{\hyperlink{classnlib2_1_1Modflow_ac6cc3a2e1c7bc9bd974a2f5555e5bcf4}{Modflow\+::sources}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1Sinks}{nlib2\+::\+Sinks}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classnlib2_1_1Sinks}{Sinks}} is a default module that does not create regular channels, but the Parent can create \char`\"{}sink\char`\"{} channels, to which Modules can regularly emit signals, but they are connected to the external parent\textquotesingle{}s callback. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1SerializedSlot}{nlib2\+::\+Serialized\+Slot}}
+\begin{DoxyCompactList}\small\item\em Type erasure wrapper for storing generic functions. For internal use. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlib2_1_1Modflow}{nlib2\+::\+Modflow}}
+\begin{DoxyCompactList}\small\item\em This is the main class that handles the call flow between modules. First, you will need to derive this class and override \mbox{\hyperlink{classnlib2_1_1Modflow_ad48414425831bab7fa9ec617cd1a0aa2}{load\+Modules}}, calling \mbox{\hyperlink{classnlib2_1_1Modflow_a7454ed4e6961c6db8d5adf2128250b73}{load\+Module}} with the type of each module you want to load as template parameter. Then\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{nl__modflow_8h_a724af5d34e32c626132116c61c547a76}\label{nl__modflow_8h_a724af5d34e32c626132116c61c547a76}} 
+using {\bfseries nlib2\+::\+Channel\+Id} = int64\+\_\+t
+\item 
+\mbox{\Hypertarget{nl__modflow_8h_a425d0a349eb37aef5cf460e4ecc86837}\label{nl__modflow_8h_a425d0a349eb37aef5cf460e4ecc86837}} 
+{\footnotesize template$<$typename R , typename ... T$>$ }\\using {\bfseries nlib2\+::\+Slot} = std\+::function$<$ R(const Event\+::\+Shared\+Ptr \&, T ...)$>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Nicola Lissandrini 
+\end{DoxyAuthor}

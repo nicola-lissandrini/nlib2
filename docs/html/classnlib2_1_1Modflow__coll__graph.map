@@ -1,0 +1,5 @@
+<map id="nlib2::Modflow" name="nlib2::Modflow">
+<area shape="rect" id="node1" title="This is the main class that handles the call flow between modules. First, you will need to derive thi..." alt="" coords="135,109,252,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,181,47"/>
+<area shape="rect" id="node3" href="$classnlib2_1_1ResourceManager.html" title="Allow sharing resources of generic types among modules." alt="" coords="205,13,384,39"/>
+</map>

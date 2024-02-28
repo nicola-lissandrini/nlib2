@@ -1,0 +1,91 @@
+\hypertarget{classnlib2_1_1Channel}{}\doxysection{nlib2\+::Channel Class Reference}
+\label{classnlib2_1_1Channel}\index{nlib2::Channel@{nlib2::Channel}}
+
+
+Defines a channel that each module can create and to which other modules can connect.  
+
+
+
+
+{\ttfamily \#include $<$nl\+\_\+modflow.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... typeids$>$ }\\\mbox{\hyperlink{classnlib2_1_1Channel_a7efaad2aa70348d802548b92d03ebd8f}{Channel}} (Channel\+Id \mbox{\hyperlink{classnlib2_1_1Channel_a997f80fe6cb43b89dc30a1d3169cf337}{id}}, const std\+::string \&\mbox{\hyperlink{classnlib2_1_1Channel_a78b67598118b7f8efd8997ff4b5d3571}{name}}, const \mbox{\hyperlink{classnlib2_1_1Module}{Module}} $\ast$owner, bool is\+Sink, const typeids $\ast$...ids)
+\begin{DoxyCompactList}\small\item\em Create a new channel given\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnlib2_1_1Channel_a50e1f41edaebc8d00ecf45ad87de63ca}\label{classnlib2_1_1Channel_a50e1f41edaebc8d00ecf45ad87de63ca}} 
+{\bfseries Channel} (const \mbox{\hyperlink{classnlib2_1_1Channel}{Channel}} \&)=default
+\item 
+\mbox{\Hypertarget{classnlib2_1_1Channel_a997f80fe6cb43b89dc30a1d3169cf337}\label{classnlib2_1_1Channel_a997f80fe6cb43b89dc30a1d3169cf337}} 
+Channel\+Id \mbox{\hyperlink{classnlib2_1_1Channel_a997f80fe6cb43b89dc30a1d3169cf337}{id}} () const
+\begin{DoxyCompactList}\small\item\em Get unique identifier of the channel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnlib2_1_1Channel_a78b67598118b7f8efd8997ff4b5d3571}\label{classnlib2_1_1Channel_a78b67598118b7f8efd8997ff4b5d3571}} 
+const std\+::string \& \mbox{\hyperlink{classnlib2_1_1Channel_a78b67598118b7f8efd8997ff4b5d3571}{name}} () const
+\begin{DoxyCompactList}\small\item\em Get name of the channel. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... T$>$ }\\bool \mbox{\hyperlink{classnlib2_1_1Channel_ae9c870baf9ce48614bde4022eb7cdef7}{check\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Check whether supplied type is compatible with \mbox{\hyperlink{classnlib2_1_1Channel}{Channel}} type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnlib2_1_1Channel_a5f46543853c2a7ec8488589c437c0b2a}\label{classnlib2_1_1Channel_a5f46543853c2a7ec8488589c437c0b2a}} 
+std\+::vector$<$ std\+::type\+\_\+index $>$ \mbox{\hyperlink{classnlib2_1_1Channel_a5f46543853c2a7ec8488589c437c0b2a}{types}} () const
+\begin{DoxyCompactList}\small\item\em Return vector of the types of the channel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnlib2_1_1Channel_a88e4322862ef16df46bcb3df8cda975f}\label{classnlib2_1_1Channel_a88e4322862ef16df46bcb3df8cda975f}} 
+std\+::string \mbox{\hyperlink{classnlib2_1_1Channel_a88e4322862ef16df46bcb3df8cda975f}{owner\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Return name of owner module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnlib2_1_1Channel_a9d2dbf2567d35c114135a85786f6e492}\label{classnlib2_1_1Channel_a9d2dbf2567d35c114135a85786f6e492}} 
+bool \mbox{\hyperlink{classnlib2_1_1Channel_a9d2dbf2567d35c114135a85786f6e492}{check\+Ownership}} (const \mbox{\hyperlink{classnlib2_1_1Module}{Module}} $\ast$caller) const
+\begin{DoxyCompactList}\small\item\em Verify that a module is the effective owner of the channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a channel that each module can create and to which other modules can connect. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnlib2_1_1Channel_a7efaad2aa70348d802548b92d03ebd8f}\label{classnlib2_1_1Channel_a7efaad2aa70348d802548b92d03ebd8f}} 
+\index{nlib2::Channel@{nlib2::Channel}!Channel@{Channel}}
+\index{Channel@{Channel}!nlib2::Channel@{nlib2::Channel}}
+\doxysubsubsection{\texorpdfstring{Channel()}{Channel()}}
+{\footnotesize\ttfamily template$<$typename ... typeids$>$ \\
+nlib2\+::\+Channel\+::\+Channel (\begin{DoxyParamCaption}\item[{Channel\+Id}]{id,  }\item[{const std\+::string \&}]{name,  }\item[{const \mbox{\hyperlink{classnlib2_1_1Module}{Module}} $\ast$}]{owner,  }\item[{bool}]{is\+Sink,  }\item[{const typeids $\ast$...}]{ids }\end{DoxyParamCaption})}
+
+
+
+Create a new channel given\+: 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique identifier of the channel \\
+\hline
+{\em name} & Unique name that can resolve to the id from a Mod\+Flow handler \\
+\hline
+{\em ids} & \mbox{\hyperlink{classnlib2_1_1Channel}{Channel}} type(s) identifier\+: only slots with same type(s) as channel can be connected \\
+\hline
+{\em owner} & Pointer to owner module\+: only owner can emit events on channels has itself created \\
+\hline
+{\em is\+Sink} & Sink channels are connected to Parent methods, external to modflow \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnlib2_1_1Channel_ae9c870baf9ce48614bde4022eb7cdef7}\label{classnlib2_1_1Channel_ae9c870baf9ce48614bde4022eb7cdef7}} 
+\index{nlib2::Channel@{nlib2::Channel}!checkType@{checkType}}
+\index{checkType@{checkType}!nlib2::Channel@{nlib2::Channel}}
+\doxysubsubsection{\texorpdfstring{checkType()}{checkType()}}
+{\footnotesize\ttfamily template$<$typename ... Channel\+Ts$>$ \\
+bool nlib2\+::\+Channel\+::check\+Type}
+
+
+
+Check whether supplied type is compatible with \mbox{\hyperlink{classnlib2_1_1Channel}{Channel}} type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type(s) to check Channel-\/type with \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nlib2/\mbox{\hyperlink{nl__modflow_8h}{nl\+\_\+modflow.\+h}}\item 
+include/nlib2/nl\+\_\+modflow\+\_\+impl.\+hpp\end{DoxyCompactItemize}

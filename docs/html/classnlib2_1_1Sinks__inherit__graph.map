@@ -1,0 +1,4 @@
+<map id="nlib2::Sinks" name="nlib2::Sinks">
+<area shape="rect" id="node1" title="Sinks is a default module that does not create regular channels, but the Parent can create &quot;sink&quot; cha..." alt="" coords="12,80,109,107"/>
+<area shape="rect" id="node2" href="$classnlib2_1_1Module.html" title="This is the core node of a Modflow graph. Inherit this class to define the main computation units to ..." alt="" coords="5,5,116,32"/>
+</map>

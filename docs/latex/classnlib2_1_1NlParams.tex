@@ -1,0 +1,64 @@
+\hypertarget{classnlib2_1_1NlParams}{}\doxysection{nlib2\+::Nl\+Params Class Reference}
+\label{classnlib2_1_1NlParams}\index{nlib2::NlParams@{nlib2::NlParams}}
+
+
+Inheritance diagram for nlib2\+::Nl\+Params\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classnlib2_1_1NlParams__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for nlib2\+::Nl\+Params\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classnlib2_1_1NlParams__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlParams_a443a8a5dfd17e2b491829427f2d6f16d}\label{classnlib2_1_1NlParams_a443a8a5dfd17e2b491829427f2d6f16d}} 
+{\footnotesize template$<$typename ParameterT $>$ }\\ParameterT {\bfseries get} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlParams_af85df791880b0082fe0ea59d54b50bf0}\label{classnlib2_1_1NlParams_af85df791880b0082fe0ea59d54b50bf0}} 
+{\footnotesize template$<$typename ParameterT $>$ }\\void {\bfseries declare} (const std\+::string \&name, const std\+::optional$<$ ParameterT $>$ \&default\+Value=std\+::nullopt)
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlParams_a2bcce8f2e6a2c640fa50354dfdc14ac4}\label{classnlib2_1_1NlParams_a2bcce8f2e6a2c640fa50354dfdc14ac4}} 
+{\footnotesize template$<$typename ParameterT $>$ }\\ParameterT {\bfseries declare\+And\+Get} (const std\+::string \&name, const std\+::optional$<$ ParameterT $>$ \&default\+Value=std\+::nullopt)
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlParams_a5d2c3f02acd649e11edb206a9d3c39e1}\label{classnlib2_1_1NlParams_a5d2c3f02acd649e11edb206a9d3c39e1}} 
+Nl\+Params\+::\+Shared\+Ptr {\bfseries derive} (const std\+::string \&child\+Name)
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlParams_aaaf86430c364bc8906b4968591baf371}\label{classnlib2_1_1NlParams_aaaf86430c364bc8906b4968591baf371}} 
+std\+::string {\bfseries full\+Name} (const std\+::string \&child\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlParams_ac394fa31416c3707308bf1875a10b17e}\label{classnlib2_1_1NlParams_ac394fa31416c3707308bf1875a10b17e}} 
+static Nl\+Params\+::\+Shared\+Ptr {\bfseries initialize} (const IParameter\+Server\+::\+Shared\+Ptr \&parameter\+Server)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlParams_a4f8f356388e03fda244e043e8fd82d45}\label{classnlib2_1_1NlParams_a4f8f356388e03fda244e043e8fd82d45}} 
+Nl\+Params\+::\+Shared\+Ptr {\bfseries \+\_\+parent}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlParams_ab0deaaa34764080b70d71cf9bb5f6971}\label{classnlib2_1_1NlParams_ab0deaaa34764080b70d71cf9bb5f6971}} 
+std\+::string {\bfseries \+\_\+param\+Namespace}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlParams_a01b4229c1365c3806ea9c6817dc22814}\label{classnlib2_1_1NlParams_a01b4229c1365c3806ea9c6817dc22814}} 
+IParameter\+Server\+::\+Shared\+Ptr {\bfseries \+\_\+parameter\+Server}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nlib2/nl\+\_\+params.\+h\item 
+include/nlib2/nl\+\_\+params\+\_\+impl.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="nlib2::Sources" name="nlib2::Sources">
+<area shape="rect" id="node1" title="Sources are a particular Module whose channels are declared by the parent object, which emits signals..." alt="" coords="5,80,119,107"/>
+<area shape="rect" id="node2" href="$classnlib2_1_1Module.html" title="This is the core node of a Modflow graph. Inherit this class to define the main computation units to ..." alt="" coords="7,5,117,32"/>
+</map>

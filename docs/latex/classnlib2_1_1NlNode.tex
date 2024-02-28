@@ -1,0 +1,77 @@
+\hypertarget{classnlib2_1_1NlNode}{}\doxysection{nlib2\+::Nl\+Node$<$ Derived $>$ Class Template Reference}
+\label{classnlib2_1_1NlNode}\index{nlib2::NlNode$<$ Derived $>$@{nlib2::NlNode$<$ Derived $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_aeb8d6fe7cb53254692f5f22b7835b3e1}\label{classnlib2_1_1NlNode_aeb8d6fe7cb53254692f5f22b7835b3e1}} 
+{\bfseries Nl\+Node} (int argc, char $\ast$$\ast$argv, const std\+::string \&name, const rclcpp\+::\+Node\+Options \&options=rclcpp\+::\+Node\+Options())
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a3a2a37465e7b626590f3195c837f7610}\label{classnlib2_1_1NlNode_a3a2a37465e7b626590f3195c837f7610}} 
+int {\bfseries spin} ()
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a9617791547de06170cf2de15c045a686}\label{classnlib2_1_1NlNode_a9617791547de06170cf2de15c045a686}} 
+const std\+::string \& {\bfseries name} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a821713f4aea3c80e8c6f4f726ae03786}\label{classnlib2_1_1NlNode_a821713f4aea3c80e8c6f4f726ae03786}} 
+void {\bfseries init\+Params} ()
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a6720105e3073ea88c4f5319bbadfa811}\label{classnlib2_1_1NlNode_a6720105e3073ea88c4f5319bbadfa811}} 
+void {\bfseries init\+ROS} ()
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a035bf68b5f59a441d9e49f3b80f2e963}\label{classnlib2_1_1NlNode_a035bf68b5f59a441d9e49f3b80f2e963}} 
+{\footnotesize template$<$typename MessageT $>$ }\\void {\bfseries add\+Subscription} (const std\+::string \&name, const std\+::string \&topic, const rclcpp\+::\+QoS \&qos, void(Derived\+::$\ast$callback)(MessageT))
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a3f02eda3080092c2fd87085ad4c9eeda}\label{classnlib2_1_1NlNode_a3f02eda3080092c2fd87085ad4c9eeda}} 
+{\footnotesize template$<$typename MessageT $>$ }\\void {\bfseries add\+Subscription} (const std\+::string \&name, const rclcpp\+::\+QoS \&qos, void(Derived\+::$\ast$callback)(MessageT))
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a6a24f450e6c992e7086a5f784ed816fb}\label{classnlib2_1_1NlNode_a6a24f450e6c992e7086a5f784ed816fb}} 
+{\footnotesize template$<$typename MessageT $>$ }\\void {\bfseries add\+Publisher} (const std\+::string \&name, const std\+::string \&topic, const rclcpp\+::\+QoS \&qos)
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a1923d4fe0d2158aff5feaa1114c86d77}\label{classnlib2_1_1NlNode_a1923d4fe0d2158aff5feaa1114c86d77}} 
+{\footnotesize template$<$typename MessageT $>$ }\\void {\bfseries add\+Publisher} (const std\+::string \&name, const rclcpp\+::\+QoS \&qos)
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a68f0faaacadc2010b522859fd9fa742a}\label{classnlib2_1_1NlNode_a68f0faaacadc2010b522859fd9fa742a}} 
+{\footnotesize template$<$typename MessageT $>$ }\\void {\bfseries publish} (const std\+::string \&name, const MessageT \&msg)
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a759a25bbf1be14545b08523bed1368c2}\label{classnlib2_1_1NlNode_a759a25bbf1be14545b08523bed1368c2}} 
+void {\bfseries on\+Param\+Change} (const std\+::string \&param\+Name)
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_ac73b11b2a30ac6d1e6c66d08216bc010}\label{classnlib2_1_1NlNode_ac73b11b2a30ac6d1e6c66d08216bc010}} 
+void {\bfseries on\+Clock} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a2c1b5f0aba33ffd2907ca14090fb07ad}\label{classnlib2_1_1NlNode_a2c1b5f0aba33ffd2907ca14090fb07ad}} 
+std\+::string {\bfseries \+\_\+name}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a95afc70ec34a73c9c1634a18b4def4d1}\label{classnlib2_1_1NlNode_a95afc70ec34a73c9c1634a18b4def4d1}} 
+rclcpp\+::\+Node\+::\+Shared\+Ptr {\bfseries \+\_\+node}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a4e2116aa72f2bdced8f43f69b344a7b3}\label{classnlib2_1_1NlNode_a4e2116aa72f2bdced8f43f69b344a7b3}} 
+ROS2\+Parameter\+Server\+::\+Shared\+Ptr {\bfseries \+\_\+parameter\+Server}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a740b80829ca50a66bde56797034ff2eb}\label{classnlib2_1_1NlNode_a740b80829ca50a66bde56797034ff2eb}} 
+Nl\+Params\+::\+Shared\+Ptr {\bfseries \+\_\+nl\+Params}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_aba92d59a5dc88f879514ab6de435cae6}\label{classnlib2_1_1NlNode_aba92d59a5dc88f879514ab6de435cae6}} 
+std\+::unordered\+\_\+map$<$ std\+::string, rclcpp\+::\+Publisher\+Base\+::\+Shared\+Ptr $>$ {\bfseries \+\_\+publishers}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a8ba87d93f4ce4e56916e1a56d99ac708}\label{classnlib2_1_1NlNode_a8ba87d93f4ce4e56916e1a56d99ac708}} 
+std\+::unordered\+\_\+map$<$ std\+::string, rclcpp\+::\+Subscription\+Base\+::\+Shared\+Ptr $>$ {\bfseries \+\_\+subscriptions}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a4525f5ddb28ac70684fbdb0ed48812aa}\label{classnlib2_1_1NlNode_a4525f5ddb28ac70684fbdb0ed48812aa}} 
+int {\bfseries \+\_\+argc}
+\item 
+\mbox{\Hypertarget{classnlib2_1_1NlNode_a05c5dc46f966d7794fe5252013f5deed}\label{classnlib2_1_1NlNode_a05c5dc46f966d7794fe5252013f5deed}} 
+char $\ast$$\ast$ {\bfseries \+\_\+argv}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nlib2/nl\+\_\+node.\+h\item 
+include/nlib2/nl\+\_\+node\+\_\+impl.\+hpp\end{DoxyCompactItemize}

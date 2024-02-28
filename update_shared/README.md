@@ -14,8 +14,6 @@ This script will get the package from the directory it is executed from (can be 
 colcon build --packages-select $package_name --cmake-args -Dshared_only=true
 ```
 
-**Warning**: it assumes that the setup file to be sourced are set in the ~/.bashrc file.
-
 ## Configure your CMakeLists.txt
 
 Group all the source targets and everything you don't want to build when exporting the shared files under an if statement, like so:

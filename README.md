@@ -72,6 +72,7 @@ public:
         emit("toMergerFirst", processed);
     }
 };
+```
 
 #### SecondProcessor
 
